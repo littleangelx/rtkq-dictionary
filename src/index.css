@@ -1,0 +1,49 @@
+:root {
+  --bg-color: #fff;
+  --main-text-color: #2d2d2d;
+  --icon-color: #757575;
+  --search-bg-color: #f4f4f4;
+  --accent: #a445ed;
+
+  --fs-heading-l: 4rem;
+  --fs-heading-m: 1.5rem;
+  --fs-heading-s: 1.25rem;
+  --fs-body-m: 1.125rem;
+  --fs-body-s: 0.875rem;
+
+  --lh-heading-l: 4.8125rem;
+  --lh-heading-m: 1.8125rem;
+  --lh-heading-s: 1.5rem;
+  --lh-body-m: 1.5rem;
+  --lh-body-s: 1.0625rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sans {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 2.5rem;
+  }
+}
+
+.app {
+  width: 46rem;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+}
