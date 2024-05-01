@@ -2,12 +2,19 @@ import { useState } from "react";
 
 import TopBar from "./components/TopBar";
 import SearchBar from "./components/SearchBar";
+import { useGetDefinitionQuery } from "./features/api/apiSlice";
+import Definition from "./components/Definition";
 
 const App = () => {
   const [font, setFont] = useState("Sans Serif");
+  const [word, setWord] = useState("");
 
   const handleChangeFont = (value) => {
     setFont(value);
+  };
+
+  const handleSearch = (value) => {
+    setWord(value);
   };
 
   return (
@@ -23,7 +30,8 @@ const App = () => {
       }}
     >
       <TopBar font={font} onChangeFont={handleChangeFont} />
-      <SearchBar />
+      <SearchBar onSearch={handleSearch} />
+      <Definition word={word} />
     </div>
   );
 };

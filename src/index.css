@@ -4,6 +4,7 @@
   --icon-color: #757575;
   --search-bg-color: #f4f4f4;
   --accent: #a445ed;
+  --heading-color: #757575;
 
   --fs-heading-l: 4rem;
   --fs-heading-m: 1.5rem;
@@ -16,6 +17,14 @@
   --lh-heading-s: 1.5rem;
   --lh-body-m: 1.5rem;
   --lh-body-s: 1.0625rem;
+}
+
+@media (max-width: 500px) {
+  :root {
+    --fs-heading-l: 2rem;
+    --fs-heading-s: 1rem;
+    --fs-body-m: 0.9375rem;
+  }
 }
 
 * {
@@ -55,6 +64,8 @@ body {
 
 .logo {
   width: 1.75rem;
+  position: relative;
+  top: -1rem;
 }
 
 @media (min-width: 768px) {
@@ -140,7 +151,110 @@ body {
 }
 
 .searchIcon {
-  position: absolute;
-  top: 6.25rem;
-  right: 1.5rem;
+  position: relative;
+  top: 1.25rem;
+  left: -2rem;
+}
+
+/* Definition Section */
+
+.definitionSection .topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1.75rem;
+}
+
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .columnContainer {
+    gap: 0;
+  }
+}
+
+.columnContainer h1 {
+  font-weight: bold;
+  font-size: var(--fs-heading-l);
+  line-height: var(--lh-heading-l);
+  color: var(--main-text-color);
+}
+
+.columnContainer p {
+  font-size: var(--fs-heading-m);
+  line-height: var(--lh-heading-m);
+  color: var(--accent);
+}
+
+.partOfSpeech {
+  font-weight: bold;
+  font-style: italic;
+  font-size: var(--fs-heading-m);
+  line-height: var(--lh-heading-m);
+  color: var(--main-text-color);
+  margin-bottom: 1.75rem;
+}
+
+.heading {
+  font-size: var(--fs-heading-s);
+  line-height: var(--lh-heading-s);
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-bottom: 2rem;
+}
+
+li {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: var(--fs-body-m);
+  line-height: var(--lh-body-m);
+  color: var(--main-text-color);
+}
+
+@media (max-width: 500px) {
+  :li {
+    margin-left: 0;
+  }
+}
+
+.example {
+  margin-left: 2rem;
+  color: var(--heading-color);
+}
+
+.synonyms {
+  font-weight: bold;
+  color: var(--accent);
+  margin-left: 1rem;
+}
+
+.headingSynonyms {
+  margin-bottom: 2rem;
+}
+
+.source {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sourceLink {
+  color: var(--main-text-color);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: var(--fs-heading-s);
+}
+
+@media (max-width: 500px) {
+  .source {
+    display: flex;
+    flex-direction: column;
+  }
 }
